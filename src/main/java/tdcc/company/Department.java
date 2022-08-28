@@ -27,21 +27,21 @@ public class Department {
     private int id;
 
     // Department v.2
-    @OneToOne
-    @JoinColumn(name = "mgrssn", referencedColumnName = "ssn")
-    private Employee manager;
+//    @OneToOne
+//    @JoinColumn(name = "mgrssn", referencedColumnName = "ssn")
+//    private Employee manager;
 
     // Department v.1
-//    @Column(name = "mgrssn")
-//    private String managerSsn;
+    @Column(name = "mgrssn")
+    private String managerSsn;
 
     @Column(name = "mgrstartdate")
     @Temporal(TemporalType.DATE)
     private Date managerStartDate;
 
     // Department v.3
-    @OneToMany(mappedBy = "department")
-    private List<Employee> employees;
+//    @OneToMany(mappedBy = "department")
+//    private List<Employee> employees;
 
 
 }

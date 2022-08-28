@@ -12,11 +12,14 @@ public class FindDepartmentById {
                 Persistence.createEntityManagerFactory("default");
         EntityManager em = emf.createEntityManager();
 
-        TypedQuery<Department> query =
-                em.createQuery("SELECT d FROM Department d WHERE d.id = :id", Department.class)
-                        .setParameter("id", 5);
-        System.out.println(query.getSingleResult().getName());
-        System.out.println(query.getSingleResult().getEmployees());
+//        TypedQuery<Department> query =
+//                em.createQuery("SELECT d FROM Department d WHERE d.id = :id", Department.class)
+//                        .setParameter("id", 5);
+//        System.out.println(query.getSingleResult().getName());
+//        System.out.println(query.getSingleResult().getEmployees());
+        Department department = em.find(Department.class, 5);
+        System.out.println(department.getId());
+        System.out.println(department.getName());
 
         em.close();
         emf.close();

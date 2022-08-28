@@ -23,9 +23,10 @@ public class InsertDepartment {
         d.setId(9);
         d.setName("XYZ1");
         //v2:
-        Employee john = getEmployee(em, "111111100");
-        //v1: d.setManagerSsn("12121213");
-        d.setManager(john);
+        //Employee john = getEmployee(em, "111111100");
+        //v1:
+        d.setManagerSsn("12121213");
+        //d.setManager(john);
         d.setManagerStartDate(new Date());
         em.persist(d);
         em.getTransaction().commit();
