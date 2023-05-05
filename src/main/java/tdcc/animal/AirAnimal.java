@@ -15,10 +15,9 @@ import jakarta.persistence.Table;
 //Strategy 2:
 //@Entity
 //@Table(name="air_animal_join")
-//@DiscriminatorValue("A")
 
 @Entity
-@DiscriminatorValue("A")
+@Table(name="animal_air_concrete")
 public class AirAnimal extends Animal
 {
     @Column(name = "wing_span")

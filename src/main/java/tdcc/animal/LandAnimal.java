@@ -15,10 +15,9 @@ import jakarta.persistence.Table;
 // Strategy 2:
 //@Entity
 //@Table(name="land_animal_join")
-//@DiscriminatorValue("L")
 
 @Entity
-@DiscriminatorValue("L")
+@Table(name = "animal_land_concrete")
 public class LandAnimal extends Animal
 {
 

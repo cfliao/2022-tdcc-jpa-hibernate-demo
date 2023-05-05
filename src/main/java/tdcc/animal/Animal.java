@@ -22,9 +22,7 @@ import jakarta.persistence.Table;
 //@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 
 @Entity
-@Table(name = "animal_single")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Animal
 {
 
